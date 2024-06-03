@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS</title>
+
+    <!-- Tailwind CSS CDN -->
+    <!-- <link href="/src/output.css" rel="stylesheet" /> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- favicon icon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="project/favicon/site.webmanifest" />
+  </head>
+  <body class="bg-gray-200">
+    <div class="container">
+      <div class="logo-section flex m-4">
+        <img src="./image/bank.png" class="w-12 h-12" alt="" srcset="" />
+        <div class="m-1">
+          <h1 class="text-blue-800 text-xs font-bold pl-2">
+            বাপের ব্যাংক লিমিটেড
+          </h1>
+          <hr class="border border-1 border-blue-700 ml-2" />
+          <h1 class="text-blue-800 text-sm font-bold pl-2">
+            Baper Bank Limited
+          </h1>
+        </div>
+      </div>
+
+      <form id="loginForm">
+        <div
+          class="form-section flex flex-col bg-white p-6 rounded-xl w-96 text-xl shadow-lg m-auto"
+        >
+          <input
+            type="text"
+            placeholder="Email address or Phone "
+            required
+            id="username"
+            class="px-4 h-10 my-2 border border-1 border-gray-200 rounded-lg outline-blue-400"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            required
+            id="password"
+            class="px-4 h-10 my-2 border border-1 border-gray-200 rounded-md outline-blue-400"
+          />
+          <button
+            type="button"
+            id="loginButton"
+            class="bg-blue-600 text-white my-2 py-2 rounded-md font-bold text-xl hover:bg-blue-700 logInButton"
+          >
+            Log in
+          </button>
+          <span
+            class="text-blue-600 text-center text-xm my-2 cursor-pointer hover:underline"
+            >Forgotten password?
+          </span>
+          <hr class="my-2" />
+          <button
+            type="submit"
+            class="bg-green-600 text-white my-2 py-2 rounded-md font-bold text-xl w-fit p-4 mx-auto hover:bg-green-700"
+          >
+            Create New Account
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Java Script start here -->
+    <script>
+      document
+        .getElementById("loginButton")
+        .addEventListener("click", function () {
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+
+          if (username && password) {
+            window.location.href = "index1.html";
+          } else {
+            alert("Please fill out both fields.");
+          }
+        });
+    </script>
+  </body>
+</html>
